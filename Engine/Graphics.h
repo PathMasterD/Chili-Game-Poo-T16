@@ -63,6 +63,10 @@ public:
 	}
 	~Graphics();
 	void DrawCircle(int x_left, int y_top, int radius, Color c);
+	void ColorScreen(Color c)
+	{
+		DrawRect(0, 0, Graphics::ScreenWidth, Graphics::ScreenHeight, c);
+	}
 private:
 	Microsoft::WRL::ComPtr<IDXGISwapChain>				pSwapChain;
 	Microsoft::WRL::ComPtr<ID3D11Device>				pDevice;

@@ -28430,6 +28430,7 @@ void Game::DrawTitleScreen( int x,int y )
 
 void Game::ComposeFrame()
 {
+	gfx.ColorScreen(Colors::GrassGreen);
 	if( !isStarted )
 	{
 		DrawTitleScreen( 325,211 );
