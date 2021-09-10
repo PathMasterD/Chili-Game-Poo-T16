@@ -349,11 +349,16 @@ void Graphics::DrawCircle(int x_left, int y_top, int radius, Color c)
 		int a = int(sqrt( (radius * radius) - (b * b) ));
 		for (int x = (x_center - (a)); x <= (x_center + (a)); ++x)
 		{
-			if( !( x == (x_center - radius) || x == (x_center + radius) ) )
-			PutPixel(x, y, c);
+			if( !(x == (x_center - radius) || x == (x_center + radius)) )
+			{
+				if( !(x < 0 || x >= Graphics::ScreenWidth || y < 0 || y >= Graphics::ScreenHeight) )
+				{
+					PutPixel(x, y, c);
+
+				}
+			}
 		}
 	}
-
 }
 
 //////////////////////////////////////////////////
