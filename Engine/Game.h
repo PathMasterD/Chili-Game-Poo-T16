@@ -40,8 +40,8 @@ public:
 private:
 	void ComposeFrame();
 	void UpdateModel();
-	/********************************/
 	/*  User Functions              */
+	/********************************/
 	void DrawGameOver( int x,int y );
 	void DrawTitleScreen( int x,int y );
 	/********************************/
@@ -52,8 +52,8 @@ private:
 	/*  User Variables              */
 	std::random_device rd;
 	std::mt19937 rng;
-	std::uniform_int_distribution<int> xDist;
-	std::uniform_int_distribution<int> yDist;
+	std::uniform_real_distribution<float> xDist;
+	std::uniform_real_distribution<float> yDist;
 	Dude dude;
 	Goal goal;
 	Meter meter;
